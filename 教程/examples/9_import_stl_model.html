@@ -78,7 +78,7 @@
         scene.add(helper);
 
         var loader = new THREE.STLLoader();
-        loader.load("/lib/assets/models/SolidHead_2_lowPoly_42k.stl", function (geometry) {
+        loader.load("../lib/assets/models/SolidHead_2_lowPoly_42k.stl", function (geometry) {
             //创建纹理
             var mat = new THREE.MeshLambertMaterial({color: 0x00ffff});
             var mesh = new THREE.Mesh(geometry, mat);

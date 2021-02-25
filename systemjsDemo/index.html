@@ -1,0 +1,39 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-10-15 10:46:46
+ * @LastEditTime: 2020-10-15 12:09:00
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /systemjsDemo/index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 在script标签中引入SystemJS依赖包和TypeScript依赖包 -->
+  <script src="node_modules/systemjs/dist/system.js">
+   
+  </script>
+  <script src="node_modules/typescript/lib/typescript.js"></script>
+  <!-- 最后使用System.config方法配置相关参数，使用System.import方法载入TypeScript的入口文件 -->
+<script>
+  console.log(System)
+  System.config({
+      Transpiler: 'typescript', // 要使用typescript编译（转译）器
+     Packages: {
+       src:  {defaultExtension: 'ts'}　// 要转义src目录下的所有ts文件
+      }
+  })
+
+  System
+      .import('src/main.ts') // 要导入的ｔｓ入口文件名
+      .then(null, console.error.bind(console)); //如果产生错误，将错误发送到浏览器console窗口
+
+</script>
+
+</body>
+</html>

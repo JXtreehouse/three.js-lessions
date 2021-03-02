@@ -1,17 +1,17 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-01 11:02:15
- * @LastEditTime: 2021-03-02 23:13:59
+ * @LastEditTime: 2021-03-02 23:24:43
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /three.js-lessions/教程/docs/THREE.JS 导入DAE格式的骨骼绑定动画模型.md
 -->
-#1.  预览
+# 1.  预览
 案例预览:
 
 ![](/常用静态资源/img/帝国士兵.gif)
 
-#2.  案例实现
+# 2.  案例实现
 案例图片会发现一个跳舞的帝国士兵，同样，这个模型也是来自官网。模型引入的方式也差不多，将上一节的STLloader.js 修改为ColladaLoader.js然后使用loader导入模型：
 
 ```

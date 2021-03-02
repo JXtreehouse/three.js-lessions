@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-02 15:30:18
- * @LastEditTime: 2021-03-02 16:01:27
+ * @LastEditTime: 2021-03-02 22:28:52
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /three.js-lessions/教程/docs/Threejs简介.md
@@ -86,6 +86,9 @@ Threejs是一款WebGL三维引擎，它可以用来做什么许多许多地场�
 
 案例实现了人物跟随着移动操作杆进行移动并执行跑步动作，右边的攻击按钮可以实现攻击，短时间内连按可以实现不同的攻击动作
 
+- [飞行游戏](http://hexgl.bkcore.com/play/)
+
+![](/常用静态资源/img/fly.gif)
 ## 2.5 科教领域
 在科教领域通过3D方式展示特定的知识相比较图像更为直观。
 
@@ -101,6 +104,13 @@ Onshape是一款机械领域的三维建模软件
 如果熟悉Solidworks、UG等CAD软件，那么你可以把Onshape理解为云Solidworks。 
 [机械模型在线预览demo](http://www.yanhuangxueyuan.com/3D/jixiezhuangpei/index.html?_blank)
 
+![](/常用静态资源/img/machine.gif)
+## 2.7 医疗领域
+[心脏](http://www.yanhuangxueyuan.com/3D/heart.html)
+
+![](/常用静态资源/img/heart.gif)
+
+# 3.  主要组件
 
 # 参考
 [从零开始初尝Three.js（大量案例、简单入手）](https://juejin.cn/post/6844904177345232903)

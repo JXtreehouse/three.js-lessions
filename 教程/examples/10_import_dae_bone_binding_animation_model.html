@@ -117,8 +117,8 @@
         var loader = new THREE.ColladaLoader();
        loader.load("../lib/assets/models/collada/stormtrooper/stormtrooper.dae", function (mesh) {
             // 在回调中能够获得对象回调后，不要急于赶紧将模型导入到场景当中，而是先把模型打印一下，查看一下模型的数据结构，然后根据需求获取一下再导入
-            console.log(mesh);
-
+            console.log("=========查看导入的mesh============",mesh);
+            // 导入模型
             var obj = mesh.scene; //获取到模型对象
 
             //添加骨骼辅助
@@ -133,6 +133,7 @@
                 }
             } );
 
+            // 创建动画:
             //AnimationMixer是场景中特定对象的动画播放器。当场景中的多个对象独立动画时，可以为每个对象使用一个AnimationMixer
             mixer = obj.mixer = new THREE.AnimationMixer(obj);
 

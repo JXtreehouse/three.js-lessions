@@ -1,0 +1,24 @@
+{
+    "name": "three-father",
+    "version": "1.0.0",
+    "description": "系统的threejs教学课程",
+    "main": "index.js",
+    "directories": {
+        "doc": "docs",
+        "example": "examples",
+        "lib": "lib"
+    },
+    "scripts": {
+        "dev": "webpack"
+    },
+    "keywords": [
+        "threejs",
+        "webpack"
+    ],
+    "author": "AlexZ33",
+    "license": "ISC",
+    "devDependencies": {
+        "webpack-cli": "^4.5.0",
+        "webpack-dev-server": "^3.11.2"
+    }
+}

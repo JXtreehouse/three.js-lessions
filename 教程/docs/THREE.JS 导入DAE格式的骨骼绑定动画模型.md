@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-01 11:02:15
- * @LastEditTime: 2021-03-02 23:24:43
+ * @LastEditTime: 2021-03-02 23:28:31
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /three.js-lessions/教程/docs/THREE.JS 导入DAE格式的骨骼绑定动画模型.md
@@ -282,7 +282,7 @@ action.play();
 </script>
 </html>
 ```
-代码仓库: 
+代码仓库: 　https://github.com/JXtreehouse/three.js-lessions/blob/develop/%E6%95%99%E7%A8%8B/examples/10_import_dae_bone_binding_animation_model.html
 
 关于此段知识相关解释可直接看 <b>标题6 加载外部模型骨骼动画</b>
 # 4. DAE模型

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-02 15:30:18
- * @LastEditTime: 2021-03-03 15:10:45
+ * @LastEditTime: 2021-03-03 15:59:15
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /three.js-lessions/教程/docs/Threejs简介.md
@@ -111,9 +111,9 @@ Onshape是一款机械领域的三维建模软件
 [scan head data](https://threejs.org/examples/#webgl2_rendertarget_texture2darray)
 
 ![](/常用静态资源/img/heart.gif)
-# 3. 3D 场景前置知识
+# 3、3D 场景前置知识
 ![](/常用静态资源/img/3D场景前置知识.png)
-# 3. １ Three.js主要组件
+# ４、 Three.js主要组件
 
 使用threejs绘制3D图形，一般绘制的结果都是通过canvas元素生成，对于平面、3D效果、视角变化和交互、动画这一块，使用threejs可以快速便捷地帮助我们完成工作，而不必一步一步创建canvas，获取context再逐条绘制。threejs有一些基本概念在使用之前必须要了解。
 
@@ -121,6 +121,8 @@ Onshape是一款机械领域的三维建模软件
 　　在实际进行绘制更加丰富的内容时，threejs提供了许多对象可以很快的完成一个复杂的3D图形，并且对于3D图像的灵活多变的调整。这些对象包括有几何形状、材料、光线、计时器、射线、辅助线、动画、音频、模型加载器、控制器等，除此之外还有例如矩阵、四元数等等一些进阶的运算，简单应用都不会涉及。
 
 ## 场景(Scene)
+
+![](/常用静态资源/img/场景Scene.png)
 对于一个3D应用，场景应当是唯一的，所有相关的内容都应当添加到唯一的场景中，不管是要显示还是不显示的，显示的画面是通过调整相机角度决定的。所有场景就是所有具体内容的容器。
 
 ```
@@ -132,6 +134,7 @@ const scene = new THREE.Scene();
 -  overrideMaterial：默认值是null，可以设定一个Material对象，这样场景中所有的物体被渲染出来就会是设定的材料
 ## 相机(Camera)
 
+![](/常用静态资源/img/相机Camera.png)
 相机用于控制3D空间显示的区域，通常会采用显示距离的透视相机和显示投影的正交相机，当然以可以直接使用相机，并配置合适的参数来实现相应的相机。透视相机会根据场景中物体默认Z轴的深度进行近大远小的显示，而正交投影相机则会将远近不同的物体按正常的比例进行显示。
 　　普通相机直接使用：`const camera = new THREE.Camera();`
 　　3D场景汇总常用透视相机， 如果是生成一个透视相机，那么对于3D空间内同样大小但是Z轴距离不容的两个物体在相机中同时显示，更远的物体显示更小。
@@ -142,6 +145,7 @@ const camera = new THREE.PerspectiveCamera(45, 1, 1, 100);
 　透视相机默认接受4个参数，分别表示视角、截面纵横比， 近截面距离，远截面距离（具体参数解释看上面那个链接，还有模型可看）
 ## 渲染器(renderer)
 
+![](/常用静态资源/img/渲染器Renderer.png)
 浏览器中3D效果展示是基于webGL的API，使用渲染器从名字上能够体现这一点:
 ```
 const renderer = new THREE.WebGLRenderer()
@@ -153,10 +157,13 @@ const renderer = new THREE.WebGLRenderer()
 - antialias：抗锯齿效果，顾名思义，默认为false
 - logarithmicDepthBuffer：这个值默认为false，是采用对数深度检测的内容，场景中物体离视野的距离不一，一般情况下在物体重叠时显示近的物体，特殊情况有可能深度判定有问题，前后材料有重叠破损的表现，此时就需要设置为true
 # 参考
-[从零开始初尝Three.js（大量案例、简单入手）](https://juejin.cn/post/6844904177345232903)
 
-[郭隆邦_技术博客](http://www.yanhuangxueyuan.com/)
+- [Three官方文档]()
 
-[使用threejs绘制简单的3D图形](https://www.cnblogs.com/zzmiaow/p/9098086.html)
+- [从零开始初尝Three.js（大量案例、简单入手）](https://juejin.cn/post/6844904177345232903)
+
+- [郭隆邦_技术博客](http://www.yanhuangxueyuan.com/)
+
+- [使用threejs绘制简单的3D图形](https://www.cnblogs.com/zzmiaow/p/9098086.html)
 
 

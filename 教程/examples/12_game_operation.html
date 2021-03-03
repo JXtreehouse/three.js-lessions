@@ -89,13 +89,15 @@
     <div class="attack bar"></div>
 </div>
 </body>
-<script src="../js/three.js"></script>
-<script src="../js/loaders/inflate.min.js"></script>
-<script src="../js/loaders/FBXLoader.js"></script>
-<script src="../js/controls/OrbitControls.js"></script>
-<script src="../js/stats.min.js"></script>
-<script src="../js/dat.gui.min.js"></script>
-<script src="../js/dop.min.js"></script>
+<script src="../lib/three.js"></script>
+<script src="../lib/js/libs/inflate.min.js"></script>
+<script src="../lib/js/loaders/FBXLoader.js"></script>
+<script src="../lib/js/controls/OrbitControls.js"></script>
+
+<script src="../lib/js/libs/stats.min.js"></script>
+<script src="../lib/js/libs/dat.gui.min.js"></script>
+<script src="../lib/js/libs/dop.min.js"></script>
+
 
 <!--移动端调试工具-->
 <script src="https://cdn.bootcss.com/vConsole/3.2.0/vconsole.min.js"></script>
@@ -108,7 +110,17 @@
 
 <script>
     var render, camera, scene, gui, light, stats, naruto, mixer, actions, datGui;
-    var clock = new THREE.Clock();
+    var clock = new THREE.Clock(); //时间跟踪
+    var dop = new Dop(); //兼容移动端操作的库
+
+    function initRender() {
+       if(dop.browserRedirect() === "pc") {
+         renderer =  new THREE.WebGLRenderer({
+            antialias: true, 
+            logarithmicDepthBuffer: true
+         })
+       }
+    }
     
 </script>
 </html>

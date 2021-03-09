@@ -9,6 +9,15 @@
 
 ## 2.1 创建scene
 
+## 2.2 创建camera
+
+## 2.3 创建灯光
+
+## 2.4 创建草地
+
+# 人物模型和动画
+
+
 # 参考
 [ The Making of “The Aviator”: Animating a Basic 3D Scene with Three.js](https://tympanus.net/codrops/2016/04/26/the-aviator-animating-basic-3d-scene-threejs/) : 使用three.js设计游戏的学习心得与知识分享
 

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-02 15:30:18
- * @LastEditTime: 2021-03-09 19:35:33
+ * @LastEditTime: 2021-03-11 19:25:38
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /three.js-lessions/教程/docs/Threejs简介.md
@@ -121,6 +121,8 @@ OrthographicCamera#webgl2_rendertarget_texture2darray)
 
 ## 场景(Scene)
 
+> 场景用来容纳图形元素。场景相当于宇宙，而图形元素就是星星，图形元素只有添加到场景中，其坐标、大小等才有意义。
+
 ![](/常用静态资源/img/场景Scene.png)
 对于一个3D应用，场景应当是唯一的，所有相关的内容都应当添加到唯一的场景中，不管是要显示还是不显示的，显示的画面是通过调整相机角度决定的。所有场景就是所有具体内容的容器。
 
@@ -132,6 +134,7 @@ const scene = new THREE.Scene();
 -  fog: 表示是否在场景中添加雾气效果，在3D空间中会变成一个有可见度的空间，默认值为null，可以设置一个Fog对象
 -  overrideMaterial：默认值是null，可以设定一个Material对象，这样场景中所有的物体被渲染出来就会是设定的材料
 ## 相机(Camera)
+> 相机的作用是定义可视域，即确定哪些图形元素是可见的。
 
 ![](/常用静态资源/img/相机Camera.png)
 相机用于控制3D空间显示的区域，通常会采用显示距离的透视相机和显示投影的正交相机，当然以可以直接使用相机，并配置合适的参数来实现相应的相机。透视相机会根据场景中物体默认Z轴的深度进行近大远小的显示，而正交投影相机则会将远近不同的物体按正常的比例进行显示。
@@ -245,6 +248,7 @@ object.traverse(function(child) {
 ```
 
 ## 渲染器(renderer)
+> 渲染器则负责用如何渲染出图像，是使用WegGL还是Canvas。
 
 ![](/常用静态资源/img/渲染器Renderer.png)
 浏览器中3D效果展示是基于webGL的API，使用渲染器从名字上能够体现这一点:
@@ -269,4 +273,5 @@ const renderer = new THREE.WebGLRenderer()
 
 - [十分钟打造 3D 物理世界](https://jelly.jd.com/article/5c3409fed7aa2c0055d09a75)
 
+- [郭先生的博客](https://cloud.tencent.com/developer/column/88624)
 

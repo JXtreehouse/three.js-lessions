@@ -208,12 +208,11 @@ THREE.MTLLoader.MaterialCreator.prototype = {
 
 	constructor: THREE.MTLLoader.MaterialCreator,
 
-	crossOrigin: 'anonymous',
+	crossOrigin: 'Anonymous',
 
 	setCrossOrigin: function ( value ) {
 
 		this.crossOrigin = value;
-		return this;
 
 	},
 

@@ -1,11 +1,11 @@
 /**
  * @author alteredq / http://alteredqualia.com/
  */
-// renderer：渲染器对象  WebGLRenderer.js
+
 THREE.EffectComposer = function ( renderer, renderTarget ) {
 
 	this.renderer = renderer;
-// 涮锅参数2没有定义，代码自动定义渲染目标
+
 	if ( renderTarget === undefined ) {
 
 		var parameters = {
@@ -16,15 +16,12 @@ THREE.EffectComposer = function ( renderer, renderTarget ) {
 		};
 
 		var size = renderer.getDrawingBufferSize();
-		// 借助渲染目标对象    即使没有传输响应参数   也可以直接操作参数   不用重新声明变量
 		renderTarget = new THREE.WebGLRenderTarget( size.width, size.height, parameters );
 		renderTarget.texture.name = 'EffectComposer.rt1';
 
 	}
-//把参数renderTarget赋值给renderTarget1，renderTarget可以来自外部，可以来自内部代码生成
-//renderTarget首次渲染之前，是没有关联帧缓冲区的  渲染一次后，会关联一个帧缓冲区
+
 	this.renderTarget1 = renderTarget;
-	// 深拷贝渲染目标
 	this.renderTarget2 = renderTarget.clone();
 	this.renderTarget2.texture.name = 'EffectComposer.rt2';
 

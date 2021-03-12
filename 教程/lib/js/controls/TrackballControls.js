@@ -360,8 +360,6 @@ THREE.TrackballControls = function ( object, domElement ) {
 
 		_prevState = _state;
 
-		console.log(event.keyCode);
-
 		if ( _state !== STATE.NONE ) {
 
 			return;

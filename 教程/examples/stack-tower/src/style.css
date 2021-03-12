@@ -1,0 +1,83 @@
+/* Styles go here. */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.status {
+    position: absolute;
+    z-index: 1;
+    color: white;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.title,
+.score {
+    top: 6vh;
+    font-size: 70px;
+}
+
+.start,
+.retry {
+    top: 25vh;
+    font-size: 28px;
+}
+
+.high-score {
+    top: 3vh;
+    right: 3vw;
+    font-size: 24px;
+}
+
+/* utils */
+
+.opacity-0 {
+    opacity: 0 !important;
+}
+
+.bg-blue-grad-1 {
+    background: linear-gradient(-225deg, #473b7b 0%, #3584a7 51%, #30d2be 100%);
+}
+
+/* common */
+
+#app {
+    width: 100%;
+    height: 100%;
+}
+
+/* animations */
+.shadow-in {
+    animation: shadow-in 1s linear;
+}
+
+@keyframes shadow-in {
+    from {
+        text-shadow: 0 0 1rem white, 2rem -2rem 1rem white, 2rem 2rem 1rem white,
+            -2rem 2rem 1rem white, -2rem -2rem 1rem white;
+        opacity: 0;
+    }
+
+    to {
+        text-shadow: 0 0 0 white;
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fade-in 1s;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

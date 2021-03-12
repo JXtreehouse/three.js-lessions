@@ -32,8 +32,6 @@
 
 	Object.assign( THREE.FBXLoader.prototype, {
 
-		crossOrigin: 'anonymous',
-
 		load: function ( url, onLoad, onProgress, onError ) {
 
 			var self = this;
@@ -62,13 +60,6 @@
 				}
 
 			}, onProgress, onError );
-
-		},
-
-		setCrossOrigin: function ( value ) {
-
-			this.crossOrigin = value;
-			return this;
 
 		},
 
@@ -102,11 +93,9 @@
 
 			// console.log( FBXTree );
 
-			var textureLoader = new THREE.TextureLoader( this.manager ).setPath( resourceDirectory ).setCrossOrigin( this.crossOrigin );
-
 			var connections = parseConnections( FBXTree );
 			var images = parseImages( FBXTree );
-			var textures = parseTextures( FBXTree, textureLoader, images, connections );
+			var textures = parseTextures( FBXTree, new THREE.TextureLoader( this.manager ).setPath( resourceDirectory ), images, connections );
 			var materials = parseMaterials( FBXTree, textures, connections );
 			var deformers = parseDeformers( FBXTree, connections );
 			var geometryMap = parseGeometries( FBXTree, connections, deformers );
@@ -633,7 +622,7 @@
 						id: nodeID,
 					};
 
-					morphTarget.rawTargets = parseMorphTargets( relationships, deformerNode, DeformerNodes, connections );
+					morphTarget.rawTargets = parseMorphTargets( relationships, deformerNode, DeformerNodes, connections, FBXTree );
 					morphTarget.id = nodeID;
 
 					if ( relationships.parents.length > 1 ) console.warn( 'THREE.FBXLoader: morph target attached to more than one geometry is not supported.' );

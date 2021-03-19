@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-12 16:07:30
- * @LastEditTime: 2021-03-19 18:05:31
+ * @LastEditTime: 2021-03-19 18:16:22
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /three.js-lessions/教程/examples/first-demo/src/index.ts
@@ -20,7 +20,7 @@ import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer";
 import Stats from "three/examples/jsm/libs/stats.module";
 
-require('./aqua.css')
+require('./aqua.css') // 或者 import('./aqua.css')
 
 const calcAspect = (el: HTMLElement) => el.clientWidth / el.clientHeight;
 

@@ -1,5 +1,5 @@
 {
-    "name": "three-typescript-starter",
+    "name": "three-typescript-starter-first-demo",
     "version": "1.0.0",
     "description": "three.js + typescript",
     "main": "index.js",
@@ -9,15 +9,15 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/pinqy520/three-typescript-starter.git"
+        "url": "git+https://github.com/JXtreehouse/three.js-lessions/tree/gh-pages/%E6%95%99%E7%A8%8B/examples/first-demo"
     },
     "keywords": [],
-    "author": "Huang Qi",
+    "author": "AlexZ33",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/pinqy520/three-typescript-starter/issues"
+        "url": "https://github.com/JXtreehouse/three.js-lessions/tree/gh-pages/%E6%95%99%E7%A8%8B/examples/first-demo"
     },
-    "homepage": "https://github.com/pinqy520/three-typescript-starter#readme",
+    "homepage": "",
     "devDependencies": {
         "css-loader": "latest",
         "html-webpack-plugin": "latest",

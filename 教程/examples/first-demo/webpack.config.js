@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-12 16:07:30
- * @LastEditTime: 2021-03-19 18:05:02
+ * @LastEditTime: 2021-03-19 18:15:24
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /three.js-lessions/教程/examples/first-demo/webpack.config.js
@@ -58,7 +58,6 @@ module.exports = {
             filename: 'index.html',
             inject: 'body',
         }),
-        // 设置生成css 的路径和文件名，会自动将对应entry入口js文件中引入的CSS抽出成单独的文件
         new MiniCssExtractPlugin(),
     ],
 };

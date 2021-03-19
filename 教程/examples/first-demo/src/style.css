@@ -1,7 +1,10 @@
 /* Styles go here. */
 
-html,
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   margin: 0;
-  padding: 0;
+  background: hsl(240, 56%, 98%);
 }

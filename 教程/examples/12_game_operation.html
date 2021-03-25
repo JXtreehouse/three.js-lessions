@@ -129,7 +129,12 @@
     }
 
     function initCamera() {
-        camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 20000);
+        camera = new THREE.PerspectiveCamera(
+        45, // fov
+         window.innerWidth / window.innerHeight, //aspect
+          0.1, // near
+           20000 ,//far
+        );
         camera.position.set(0, 800, -800);
         camera.lookAt(new THREE.Vector3());
     }
@@ -155,8 +160,10 @@
     }
 
     function initLight() {
+         // 照射全局的环境光
         scene.add(new THREE.AmbientLight(0x444444));
-
+        
+        // 可以产生阴影的平行光
         light = new THREE.DirectionalLight(0xaaaaaa);
         light.position.set(0, 200, 100);
         light.lookAt(new THREE.Vector3());
@@ -175,13 +182,21 @@
 
     function initModel() {
 
-        // 地板
+        // 草地
+        // 加载纹理
+        // 通过纹理贴图加载器TextureLoader的load()方法加载一张图片可以返回一个纹理对象Texture，
+        // 纹理对象Texture可以作为模型材质颜色贴图.map属性的值。
         var groundTexture = new THREE.TextureLoader().load('../lib/assets/images/grasslight-big.jpg');
         groundTexture.wrapS = groundTexture.wrapT = THREE.RepeatWrapping;
         groundTexture.repeat.set(25, 25);
         groundTexture.anisotropy = 16;
-        var groundMaterial = new THREE.MeshLambertMaterial({map: groundTexture});
-        var mesh = new THREE.Mesh(new THREE.PlaneBufferGeometry(20000, 20000), groundMaterial);
+        // 立即使用纹理进行材质创建
+         //材质对象Material
+        var groundMaterial = new THREE.MeshLambertMaterial({
+           // 设置颜色纹理贴图：Texture对象作为材质map属性的属性值
+            map: groundTexture //设置颜色贴图属性值
+        });
+        var mesh = new THREE.Mesh(new THREE.PlaneBufferGeometry(20000, 20000), groundMaterial); // 网格模型对象Mesh
         mesh.rotation.x = -Math.PI / 2;
         mesh.receiveShadow = true;
         scene.add(mesh);

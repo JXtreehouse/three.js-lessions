@@ -204,9 +204,11 @@
         //加载模型
         var loader = new THREE.FBXLoader();
         loader.load("../lib/assets/models/fbx/Naruto.fbx", function (mesh) {
-
+             
+             // 我们不单单只是将模型添加到场景，还对模型的阴影和位置做了一下调整：
             //设置模型的每个部位都可以投影
             mesh.traverse(function (child) {
+               console.log(child)
                 if (child.isMesh) {
                     child.castShadow = true;
                     child.receiveShadow = true;
@@ -217,7 +219,6 @@
             mixer = mesh.mixer = new THREE.AnimationMixer(mesh);
 
             actions = []; //所有的动画数组
-
             for (var i = 0; i < mesh.animations.length; i++) {
                 createAction(i);
             }
@@ -244,10 +245,10 @@
             };
 
             //第24个动作是鸣人站立的动作
-            gui["action" + 24]();
-
+            gui["action" + 24]();   
+            
+            // 调整模型的位置，站立在草地上面
             mesh.position.y += 110;
-
             //设置光线焦点模型
             light.target = mesh;
 

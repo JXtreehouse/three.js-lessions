@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-03-25 14:36:17
+ * @LastEditTime: 2021-03-25 15:32:15
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /three.js-lessions/README.md
+-->
 # three.js-lessions
 学习仓库
 ----
@@ -6,3 +14,7 @@
   </a><a href="https://www.zhihu.com/column/c_1069272612663902208">     <img border="0" src="https://user-images.githubusercontent.com/21971405/112428507-3a609e80-8d76-11eb-9335-072c9f7d7966.png"/></a>
 </p>
 
+# Awesome Game
+
+![](/常用静态资源/img/fly.gif)
+[BKcore/HexGL](https://github.com/JXtreehouse/HexGL)

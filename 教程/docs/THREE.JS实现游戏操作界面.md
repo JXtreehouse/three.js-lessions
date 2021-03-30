@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-02 23:44:34
- * @LastEditTime: 2021-03-25 19:30:53
+ * @LastEditTime: 2021-03-30 19:00:55
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /three.js-lessions/教程/docs/THREE.JS实现游戏操作界面.md
@@ -100,6 +100,8 @@ function move(event) {
 }
 ```
 最后在鼠标抬起事件中，我们解绑事件，将按键复原，并停止掉模型的移动状态，将模型动画恢复到站立状态。
+
+![](/常用静态资源/img/up.png)
 ```
 function up() {
     doc.remove("move", move);
@@ -120,6 +122,8 @@ function up() {
 ```
 三个事件绑定完成后，我们需要将在回调中获得的值求出当前的偏转方向和移动速度：
 首先我们获取一下当前鼠标的位置：
+
+![](/常用静态资源/img/获取当前位置.png)
 
 ```
 if (media === "pc") {
@@ -196,6 +200,8 @@ move.z = move.z * ratio * 10;
 
 我们获取到了模型的每一帧移动的距离，还需要在帧循环中调用：
 
+![](/常用静态资源/img/修改位置.png)
+
 ```
 //如果模型添加成功，则每帧都移动角色位置
 if (naruto) {
@@ -232,6 +238,8 @@ let attackCombo = false; //是否连招，接下一个攻击
 ```
 我们还设置了attackCombo设置当前是否可以连招的变量，这个变量state.skills值不为0时，将变为true。定时器每一次更新的时候，将判断attackCombo是否为true，在为true的状态下，将执行连招的下一个动作。否则，将停止连招。
 
+![](/常用静态资源/img/attackCombo.png)
+
 ```
 //attackIndex 等于0，当前不处于攻击状态  不等于，当前处于攻击状态
 if(state.skills === 0){
@@ -264,6 +272,8 @@ else{
 ```
 在关闭掉攻击动画的函数内，我们首先将state.skills设置为0，然后恢复到移动或者站立动画，最后清除掉定时器：
 
+![](/常用静态资源/img/closeAttack.png)
+
 ```
 //关闭攻击状态
 function closeAttack() {
@@ -275,7 +285,11 @@ function closeAttack() {
 
 ```
 
+
 通过很简单的一些代码，我们就实现了一个复杂的连招效果。是不是很有成就感，这就是在最前面看到的那个操作gif的效果的案例
+
+# 插件
+- OrbitControls.js: 允许我们使用鼠标或触摸屏浏览操作3D场景
 # API详解
 
 ## Scene.fog
@@ -363,3 +377,11 @@ https://wow.techbrood.com/fiddle/55419
 [Three.js Making a Game](https://threejsfundamentals.org/threejs/lessons/threejs-game.html)
 
 [16 Three.js 游戏操作案例](https://blog.csdn.net/qq_30100043/article/details/81844947)
+
+[Joystick, gamepad or 3D mouse support in Three.js](https://stackoverflow.com/questions/32973815/joystick-gamepad-or-3d-mouse-support-in-three-js)
+
+[yoannmoinet/nipplejs](https://github.com/yoannmoinet/nipplejs)
+
+[https://css-tricks.com/how-to-make-a-smartphone-controlled-3d-web-game/](https://css-tricks.com/how-to-make-a-smartphone-controlled-3d-web-game/)
+
+[ADDING SUPPORT FOR VR INPUTS WITH WEBXR AND THREE.JS](https://01.org/blogs/darktears/2019/adding-support-vr-inputs-webxr-threejs)

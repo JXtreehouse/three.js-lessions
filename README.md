@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-25 14:36:17
- * @LastEditTime: 2021-03-25 15:32:15
+ * @LastEditTime: 2021-03-30 19:05:40
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /three.js-lessions/README.md
@@ -18,3 +18,6 @@
 
 ![](/常用静态资源/img/fly.gif)
 [BKcore/HexGL](https://github.com/JXtreehouse/HexGL)
+
+# Awesome article
+[Intro to Pixel Shaders in Three.js](https://www.airtightinteractive.com/2013/02/intro-to-pixel-shaders-in-three-js/)

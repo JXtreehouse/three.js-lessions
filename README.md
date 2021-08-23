@@ -21,3 +21,9 @@
 
 # Awesome article
 [Intro to Pixel Shaders in Three.js](https://www.airtightinteractive.com/2013/02/intro-to-pixel-shaders-in-three-js/)
+
+
+# 书籍推荐
+- 《Three.Js Essentials》
+- 《threejs-cookbook》
+- 《Learning Three.js》

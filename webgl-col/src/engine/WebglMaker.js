@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-08-25 17:29:17
- * @LastEditTime: 2021-08-25 19:29:49
+ * @LastEditTime: 2021-08-27 10:47:27
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /webgl-col/src/utils/WebglMaker.js
@@ -13,7 +13,7 @@ export class WebglMaker {
         this.webglInstance = null;  // webgl实例对象
         this.vertexShader = null;  // 顶点着色器
         this.fragmentShader = null; // 片元着色
-        this.program = null;
+        this.program = null; // 着色器程序
     }
     
     setWebglInstance(webglInstance) {
@@ -47,6 +47,25 @@ export class WebglMaker {
     }
     
     setProgram() {
+        // 创建着色器程序
+        // https://developer.mozilla.org/zh-CN/docs/Web/API/WebGLRenderingContext/createProgram
+        this.program = this.webglInstance.createProgram()
+
+        // 将顶点着色器挂载在着色器程序上
+        this.webglInstance.attachShader(this.program, this.vertexShader);
         
+        // 将片元着色器挂载在着色器程序上
+        this.webglInstance.attachShader(this.program, this.fragmentShader);
+
+        // 链接着色器程序
+        this.webglInstance.linkProgram(this.program)
+
+        // 使用刚创建好的着色器程序
+        this.webglInstance.useProgram(this.program)
+    }
+
+    createBuffer() {
+        const buffer = this.webglInstance.createBuffer();
+        return buffer
     }
 }

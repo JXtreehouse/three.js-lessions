@@ -77,6 +77,7 @@ module.exports = {
     ],
   },
   plugins: [
+    // 在每次打包前，自动清理/dist/目录下的文件
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].css',

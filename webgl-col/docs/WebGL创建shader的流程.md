@@ -2,7 +2,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-08-25 17:50:52
- * @LastEditTime: 2021-08-25 18:03:51
+ * @LastEditTime: 2021-08-26 15:31:29
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /webgl-col/docs/WebGL创建shader的流程.md
@@ -68,4 +68,11 @@ shader的源码以字符串的形式绑定至shader实例，也就是说，不�
 raw-loader的功能是将被引入的文件内容转换为字符串。
 
 ![](../assets/webpackglsl.png)
+
+
+# reference
+
+https://github.com/JXtreehouse/demo_ts-webgl-webpack
+
+[Typescript + WebGL + Webpack development environment to build](https://titanwolf.org/Network/Articles/Article?AID=bef3a8b7-0744-40ed-959d-c06c4c54fab0#gsc.tab=0)
 
